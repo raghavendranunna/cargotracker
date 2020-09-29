@@ -14,7 +14,7 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.j2eeVersion>1.7</netbeans.hint.j2eeVersion>
+        <netbeans.hint.j2eeVersion>1.7</netbeans.hint.J2eeVersion>
         <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
         <webapp.databaseTempDir>/tmp</webapp.databaseTempDir>
         <webapp.graphTraversalUrl>http://localhost:8080/cargo-tracker/rest/graph-traversal/shortest-path</webapp.graphTraversalUrl>
@@ -193,7 +193,7 @@
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-war-plugin</artifactId>
+                        <artifactId>maven-war-plugin</artifactid>
                         <version>2.6</version>
                         <configuration>
                             <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -205,14 +205,9 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>2.18.1</version>
                         <configuration>
-                            <skipTests>true</skipTests>
-                            <systemPropertyVariables>
-                                <!-- This is needed to tell the unit tests which profile
-                                we are running. -->
-                                <profileId>${project.activeProfiles[0].id}</profileId>
-                                <!-- This is needed to tell Arquillian which profile
-                                we are running. -->
-                                <arquillian.launch>${project.activeProfiles[0].id}</arquillian.launch>
+                            <skipTests>true
+                            <properties xmlns="http://www.netbeans.org/ns/maven-properties-data/1">
+                            <arquillian.launch>${project.activeProfiles[0].id}</arquillian.launch>
                             </systemPropertyVariables>
                         </configuration>
                     </plugin>
