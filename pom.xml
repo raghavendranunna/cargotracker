@@ -6,8 +6,7 @@
     <groupId>net.java</groupId>
     <artifactId>cargo-tracker</artifactId>
     <version>1.0</version>
-    <packaging>war</packaging>
-
+    <packaging>war<ackaging>
     <name>cargo-tracker</name>
     <url>https://github.com/javaee/cargotracker/</url>
 
@@ -20,7 +19,7 @@
         <webapp.graphTraversalUrl>http://localhost:8080/cargo-tracker/rest/graph-traversal/shortest-path</webapp.graphTraversalUrl>
     </properties>
 
-    <!-- We need to use the PrimeFaces repository -->
+   <!-- We need to use the PrimeFaces repository -->
     <repositories>
         <repository>
             <id>primefaces</id>
@@ -70,14 +69,13 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.4</version>
             <scope>compile</scope>
-        </dependency>
-
+             </dependency>
         <!-- PrimeFaces dependencies -->
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
             <version>5.2</version>
-        </dependency>
+             </dependency>
         <dependency>
             <groupId>org.primefaces.themes</groupId>
             <artifactId>ui-lightness</artifactId>
@@ -177,7 +175,7 @@
                     </plugin>
                 </plugins>
             </build>
-        </profile>
+             </profile>
 
         <!-- WebLogic Profile -->
         <profile>
